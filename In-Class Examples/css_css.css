@@ -1,4 +1,11 @@
+.pic{
+	width:50px;
+	color: #ff00ff;
+	font-size: 100px;
+}
 p{
 	color:blue;
-	border-color: #92a8d1;
+	font: 50px impact;
 }
+
+
