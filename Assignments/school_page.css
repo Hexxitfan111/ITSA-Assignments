@@ -1,11 +1,15 @@
 body {
-	background-image:;
-}
-.header {
-	background-color: #8b4789;
+	background-image:url("https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/background_tile.png?raw=true");
+	background-repeat:repeat;
 }
 .page_title {
-	color:#47898b; font-size:60px; padding-top:1%; font-family: "Supermercado One", cursive; padding-left:30%;
+	color:#47898b; font-size:60px; padding-top:1%; font-family: "Supermercado One", cursive; padding-left:30%; 
+}
+.page_title_text, #subtitle_text{
+	border-style:solid; border-width:10px; border-color:#6b478b; background-color:#8b4789;
+}
+#subtitle_text{
+	width:49.5%;
 }
 .page_title_text:hover {
 	color:#898b47;
@@ -20,7 +24,7 @@ body {
 	padding-left:25%; padding-top: 1%
 }
 ul {
-	list-style-type:none;
+	list-style-type:none; border-style:solid; border-width:10px; border-color:#6b478b; background-color:#8b4789; padding-right:30px;
 }
 .m_top {
 	text-decoration:underline; font-weight:600;
@@ -31,10 +35,22 @@ ul {
 #banner_image {
 	width: 100%; height: 1%;
 }
+.compare_element {
+	display:flex; height:20%
+}
 .frame_1, .frame_2 {
-	display:inline-block; border-style:solid; border-width:10px; border-color:#6b478b; padding-left:7%; padding-right:7%; max-width:20%; margin:5%;
-	padding-bottom:5%; max-height:20%; background-color:#478b49;
+	flex:1; border-style:solid; border-width:10px; border-color:#6b478b; padding-left:7%; padding-right:7%; max-width:20%; margin:5%;
+	padding-bottom:10%; background-color:#898b47;
 }
 .compare_element {
 	padding-left:10%
+}
+select {
+	padding:3%; margin-left:23%;
+}
+.frame_header {
+	font-size:1.5em; padding-bottom:10%; padding-top:10%;
+}
+.frame_image {
+	padding-bottom:5%; padding-top:5%;
 }
