@@ -78,7 +78,7 @@ Comparison Frames:
 }
 
 .frame_header {
-	font-size:1.5em; padding-bottom:10%; padding-top:10%;
+	font-size:1.5em; margin-bottom:10%; margin-top:10%; border-style:solid; border-color:#47898b; text-align:center; border-width:0.3em;
 }
 
 .frame_image {
@@ -86,7 +86,7 @@ Comparison Frames:
 }
 
 .t5m {
-	font-size:1.3em; text-decoration:underline; border-style:dotted; border-color:#8b4789; text-align:center;
+	font-size:1.3em; text-decoration:underline; border-style:solid; border-color:#47898b; text-align:center;
 }
 
 
