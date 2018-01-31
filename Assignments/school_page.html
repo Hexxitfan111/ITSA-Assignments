@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 
+<!--
+									School Comparison Assignment HTML Page
+										Created by: Michael Forgione
+-->
+
 
 <html>
 
   <head>
     <title>The Mage Page</title>
+	
 	<link rel="stylesheet" type="text/css" href="school_page.css">
 	<link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+  
   </head>
+  
   <body>
-    <div class="header">
-	  <div class="logo"><img src="https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/logo.png?raw=true" size="72" width="72"></div>
-	  <div class="page_title"><div id="page_title_text">The Mage Page<br></div></div>
-	  <div class="top_menu">
-	    <ul>
-		  <div class="m_top"><li>Links:</li></div>
-	      <div class="m_p1"><li>Home</li></div>
-	      <div class="m_p2"><li>About Me</li></div>
-	      <div class="m_p3"><li>My Sites</li></div>
-	    </ul><br>
+    
+	<div class="header">
+	  <div id="top_bar">
+	  
+	    <div class="logo"><img src="https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/logo.png?raw=true" size="72" width="72"></div>
+	    <div class="page_title"><div id="page_title_text">The Mage Page<br></div></div>
+	    <div class="top_menu">
+		  <ul>
+		    <div class="m_top"><li>Links:</li></div>
+	        <div class="m_p1"><li>Home</li></div>
+	        <div class="m_p2"><li>About Me</li></div>
+	        <div class="m_p3"><li>My Sites</li></div>
+		    <!--  Links are "fake". (Imitated link behaviour such as cursor change and underline with css hover elements)  -->
+	      </ul><br>
+		</div>
 	  </div>
+	  
 	  <div class="page_subtitle"><h3 id="subtitle_text">The Go-To College Information Page for Indecisive Magic Users</h3><br></div>
 	</div>
+	
 	<div class="banner">
 	  <img id="banner_image" src="https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/banner%20image.png?raw=true">
+	  <!--  Banner image was custom created for this project  -->
 	</div>
+	
 	<br><br><br>
 	<div class="compare_element">
 	  <div class="frame_1">
@@ -35,39 +52,46 @@
 	    <div class="frame_header"><label><b>School Name:</b> College of Winterhold</label><br></div>
 		<div class="frame_image"><img src="https://tespostcards.files.wordpress.com/2013/09/the-college-of-winterhold.jpg" width="257" height="150"><br></div>
 		<table>
+		
 		  <tr>
 			<th>Year</th>
 			<th>Tuition</th> 
 			<th>Room and Board</th>
 			<th>Total</th>
 		  </tr>
+		  
 		  <tr>
 			<td>2018</td>
 			<td>Free*</td> 
 			<td>None</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2017</td>
 			<td>Free*</td> 
 			<td>None</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2016</td>
 			<td>Free*</td> 
 			<td>None</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2015</td>
 			<td>Free*</td> 
 			<td>None</td>
 			<td>$0</td>
 		  </tr>
+		  
 		</table>
 		<label>*Must display magical talent to qualify for entry</label>
 		<p>
+		
 		  <div class="t5m">Top 5 Majors:</div>
 		  <ol>
 		    <li>Restoration</li><br>
@@ -76,8 +100,10 @@
 			<li>Conjuration</li><br>
 			<li>Illusion</li>
 		  </ol>
+		  
 		</p>
 	  </div>
+	  
 	  <div class="frame_2">
 	    <select>
 		  <option>Hogwarts</option>
@@ -86,39 +112,46 @@
 	    <div class="frame_header"><label><b>School Name:</b> Hogwarts School of Witchcraft and Wizardry</label><br></div>
 		<div class="frame_image"><img src="http://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2015/07/hogwarts-school-outside.jpg" width="257" height="150"><br></div>
 		<table>
+		
 		  <tr>
 			<th>Year</th>
 			<th>Tuition</th> 
 			<th>Room and Board</th>
 			<th>Total</th>
 		  </tr>
+		  
 		  <tr>
 			<td>2018</td>
 			<td>Free*</td> 
 			<td>Free*</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2017</td>
 			<td>Free*</td> 
 			<td>Free*</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2016</td>
 			<td>Free*</td> 
 			<td>Free*</td>
 			<td>$0</td>
 		  </tr>
+		  
 		  <tr>
 			<td>2015</td>
 			<td>Free*</td> 
 			<td>Free*</td>
 			<td>$0</td>
 		  </tr>
+		  
 		</table>
 		<label>*Must display magical talent to qualify for entry</label>
 		<p>
+		
 		  <div class="t5m">Top 5 Majors:</div>
 		  <ol>
 		    <li>Alchemy</li><br>
@@ -127,10 +160,13 @@
 		    <li>Astronomy</li><br>
 		    <li>Herbology</li>
 		  </ol>
+		  
 		</p>
 	  </div>
 	</div>
 	<div class="feedback">
+	<!--  Form tag below is functionless.  -->
+	
 	  <form>
 	    <fieldset>
 		  <div class="form">
@@ -152,11 +188,13 @@
 	<div class="footer">
 	  <div id="footer_text"><br>Find me on social media:<br></div>
 	  <div class="so_me_links">
+	  
 	    <a href=""><img id="facebook" src="https://facebookbrand.com/wp-content/themes/fb-branding/prj-fb-branding/assets/images/fb-art.png"></a>
 	    <a href=""><img id="twitter" src="data:image/png;base64,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"></a>
 	    <a href=""><img id="snapchat" src="https://seeklogo.com/images/S/snapchat-logo-2D9C3E7ADA-seeklogo.com.png"></a>
 	    <a href=""><img id="mag_news" src="http://media.immediate.co.uk/volatile/sites/3/2016/01/96596.jpg?quality=90&resize=620,413"></a>
-	  </div>
+
+      </div>
 	</div>
   </body>
 
