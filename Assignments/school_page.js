@@ -11,8 +11,21 @@ sel_box_1 = document.getElementById("frame_1_select"); //Variable for easier lat
 sel_box_2 = document.getElementById("frame_2_select"); //Variable for easier later assignmentof data to box 2
 start_box_1 = 1; //Starting value for box 1
 start_box_2 = 2; //Starting value for box 2
-data_hog = XML
-data_win =
+data_hog = var client = new XMLHttpRequest();
+
+client.open('GET', '/hogwarts_data.txt');
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
+
+data_win = var client = new XMLHttpRequest();
+client.open('GET', '/winterhold_data.txt');
+client.onreadystatechange = function() {
+  alert(client.responseText);
+}
+client.send();
+
 data_dur =
 data_arc =
 data_cas =
