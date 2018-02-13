@@ -14,7 +14,7 @@ start_box_2 = 2; //Starting value for box 2
 
 //---------------------------------------------------
 data_hog = new XMLHttpRequest();
-data_hog.open("GET", "hogwarts_data.html", true);
+data_hog.open("GET", "https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/Assignments/hogwarts_data.html", true);
 data_hog.onreadystatechange = function() {
   if (data_hog.readyState === 4) {  // Makes sure the document is ready to parse.
     if (data_hog.status === 200) {  // Makes sure it's found the file.
@@ -28,7 +28,7 @@ customTextElement.innerHTML = data_hog.responseText;
 data_hog.send(null);
 //------------------------------------------------------
 data_win = new XMLHttpRequest();
-data_win.open("GET", "winterhold_data.html", true);
+data_win.open("GET", "https://github.com/Hexxitfan111/ITSA-Assignments/blob/master/Assignments/winterhold_data.html", true);
 data_win.onreadystatechange = function() {
   if (data_win.readyState === 4) {  // Makes sure the document is ready to parse.
     if (data_win.status === 200) {  // Makes sure it's found the file.
@@ -41,9 +41,9 @@ customTextElement.innerHTML = data_win.responseText;
 }
 data_win.send(null);
 //--------------------------------------------------------
-data_dur =
-data_arc =
-data_cas =
+data_dur = "";
+data_arc = "";
+data_cas = "";
 
 
 function switch_box(box_number) {
