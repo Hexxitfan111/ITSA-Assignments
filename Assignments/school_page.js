@@ -37,10 +37,10 @@ function switch_box(box_number) {
 		case 1:
 			switch (sel_box_1.value) {
 				case 1:
-					document.write(hogwarts_data);
+					frame_main_1.innerHTML = hogwarts_data;
 					return;
 				case 2:
-					document.write(winterhold_data);
+					frame_main_1.innerHTML = winterhold_data;
 					return;
 				case 3:
 					return;
