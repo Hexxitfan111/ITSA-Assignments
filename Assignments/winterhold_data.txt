@@ -1,0 +1,53 @@
+<div class="frame_header"><label><b>School Name:</b> College of Winterhold</label><br></div>
+			<div class="frame_image"><img src="https://tespostcards.files.wordpress.com/2013/09/the-college-of-winterhold.jpg" width="257" height="150"><br></div>
+			<table>
+			
+			  <tr>
+				<th>Year</th>
+				<th>Tuition</th> 
+				<th>Room and Board</th>
+				<th>Total</th>
+			  </tr>
+			  
+			  <tr>
+				<td>2018</td>
+				<td>Free*</td> 
+				<td>None</td>
+				<td>$0</td>
+			  </tr>
+			  
+			  <tr>
+				<td>2017</td>
+				<td>Free*</td> 
+				<td>None</td>
+				<td>$0</td>
+			  </tr>
+			  
+			  <tr>
+				<td>2016</td>
+				<td>Free*</td> 
+				<td>None</td>
+				<td>$0</td>
+			  </tr>
+			  
+			  <tr>
+				<td>2015</td>
+				<td>Free*</td> 
+				<td>None</td>
+				<td>$0</td>
+			  </tr>
+			  
+			</table>
+			<label>*Must display magical talent to qualify for entry</label>
+			<p>
+			
+			  <div class="t5m">Top 5 Majors:</div>
+			  <ol>
+				<li>Restoration</li><br>
+				<li>Alteration</li><br>
+				<li>Destruction</li><br>
+				<li>Conjuration</li><br>
+				<li>Illusion</li>
+			  </ol>
+			  
+			</p>
