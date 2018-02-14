@@ -12,41 +12,18 @@ start_box_2 = 2; //Starting value for box 2
 
 
 //---------------------------------------------------
-function load_dat(a) {
-	switch (a) {
-		case 1:
-			data_hog = new XMLHttpRequest();
-			data_hog.open("GET", "https://cors-anywhere.herokuapp.com/http://github.com/Hexxitfan111/ITSA-Assignments/blob/master/Assignments/hogwarts_data.html", true);
-			data_hog.onreadystatechange = function() {
-			if (data_hog.readyState === 4) {  // Makes sure the document is ready to parse.
-				if (data_hog.status === 200) {  // Makes sure it's found the file.
-					//lines = data_hog.responseText.split("\n"); // Will separate each line into an array
-					//var customTextElement = document.getElementById('textHolder');
-					return data_hog.responseText;
-					}
-				}
-			}
-			data_hog.send(null);
-			break;
-			
-		case 2:
-			//------------------------------------------------------
-			data_win = new XMLHttpRequest();
-			data_win.open("GET", "https://cors-anywhere.herokuapp.com/http://github.com/Hexxitfan111/ITSA-Assignments/blob/master/Assignments/winterhold_data.html", true);
-			data_win.onreadystatechange = function() {
-				if (data_win.readyState === 4) {  // Makes sure the document is ready to parse.
-					if (data_win.status === 200) {  // Makes sure it's found the file.
-					//lines = data_win.responseText.split("\n"); // Will separate each line into an array
-					//var customTextElement = document.getElementById('textHolder');
-					return data_win.responseText;
-				}
-			}
-			}
-			data_win.send(null);
-			break;
-	//--------------------------------------------------------
-	}
-}
+
+data_hog = new XMLHttpRequest();
+data_hog.open('GET', 'https://cors-anywhere.herokuapp.com/http://github.com/Hexxitfan111/ITSA-Assignments/blob/master/Assignments/hogwarts_data.html');
+data_hog.onload = function() {
+    if (data_hog.status === 200) {
+        alert(data_hog.responseText);
+    }
+    else {
+        alert('Request failed.  Returned status of ' + data_hog.status);
+    }
+};
+data_hog.send();
 data_dur = "";
 data_arc = "";
 data_cas = "";
