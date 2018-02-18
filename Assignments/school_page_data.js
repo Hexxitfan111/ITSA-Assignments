@@ -105,7 +105,7 @@ data_hog = '<div class="frame_header"><label><b>School Name:</b> Hogwarts School
 			  </ol>\
 			  \
 			</p>'
-data_dur = '<div class="frame_header"><label><b>School Name:</b> Hogwarts School of Witchcraft and Wizardry</label><br></div>\
+data_dur = '<div class="frame_header"><label><b>School Name:</b>Durmstrang Institute</label><br></div>\
 			<div class="frame_image"><img src="http://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2015/07/hogwarts-school-outside.jpg" width="257" height="150"><br></div>\
 			<table>\
 			\
@@ -151,15 +151,15 @@ data_dur = '<div class="frame_header"><label><b>School Name:</b> Hogwarts School
 			\
 			  <div class="t5m">Top 5 Majors:</div>\
 			  <ol>\
-				<li>Alchemy</li><br>\
-				<li>Defense Against the Dark Arts</li><br>\
-				<li>Transfiguration</li><br>\
+				<li>Astrology</li><br>\
+				<li>Summoning</li><br>\
+				<li>Transmutation</li><br>\
 				<li>Astronomy</li><br>\
-				<li>Herbology</li>\
+				<li>Defense Against the Dark Arts</li>\
 			  </ol>\
 			  \
 			</p>';
-data_arc = '<div class="frame_header"><label><b>School Name:</b> Hogwarts School of Witchcraft and Wizardry</label><br></div>\
+data_arc = '<div class="frame_header"><label><b>School Name:</b>Arcane University</label><br></div>\
 			<div class="frame_image"><img src="http://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2015/07/hogwarts-school-outside.jpg" width="257" height="150"><br></div>\
 			<table>\
 			\
@@ -205,11 +205,11 @@ data_arc = '<div class="frame_header"><label><b>School Name:</b> Hogwarts School
 			\
 			  <div class="t5m">Top 5 Majors:</div>\
 			  <ol>\
+				<li>Enchanting</li><br>\
+				<li>Defense Magic</li><br>\
 				<li>Alchemy</li><br>\
-				<li>Defense Against the Dark Arts</li><br>\
-				<li>Transfiguration</li><br>\
-				<li>Astronomy</li><br>\
-				<li>Herbology</li>\
+				<li>Destruction</li><br>\
+				<li>Cartography</li>\
 			  </ol>\
 			  \
 			</p>';

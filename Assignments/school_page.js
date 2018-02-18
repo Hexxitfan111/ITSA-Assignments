@@ -7,19 +7,26 @@
 
 */
 
-start_box_1 = 1; //Starting value for box 1
-start_box_2 = 2; //Starting value for box 2
+
 
 
 //---------------------------------------------------
+function includeJs(jsFilePath) {
+    var js = document.createElement("script");
 
-import 'school_page_data'
+    js.type = "text/javascript";
+    js.src = jsFilePath;
+
+    document.head.appendChild(js);
+}
+
+includeJs("school_page_data.js");
 
 function init() {
 init_1 = document.getElementById("frame_main_1")
 init_2 = document.getElementById("frame_main_2")
-init_2.innerHTML = school_page_data.data_hog;
-init_1.innerHTML = school_page_data.data_win;
+init_2.innerHTML = data_hog;
+init_1.innerHTML = data_win;
 }
 
 
@@ -42,12 +49,15 @@ function switch_box_1() {
 			return;
 		case '3':
 			alert('3');
+			frame_main_1.innerHTML = data_dur;
 			return;
 		case '4':
 			alert('4');
+			frame_main_1.innerHTML = data_arc;
 			return;
 		case '5':
 		alert('5')
+			frame_main_1.innerHTML = data_cas;
 			return;
 	}
 }
