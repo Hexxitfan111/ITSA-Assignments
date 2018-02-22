@@ -34,9 +34,11 @@
 .grid_item {
 	background-color: rgba(31, 165, 19, 1);
 }
-
+.pickable {
+	background-color: #a5131f;
+}
 .die_sprite {
-	width:100px; height:100px; padding:3%;
+	width:100px; height:100px; padding:3%; width:8%; height:8%;
 }
 body {
 	font-family: 'Kavivanar', cursive;

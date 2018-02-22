@@ -1,4 +1,5 @@
 yahtzee_start = {
+	//will be named 'Yahtzee' in ac
 	"turns_left" : 13,
 	"throws_left" : 3,
 	"player" : {

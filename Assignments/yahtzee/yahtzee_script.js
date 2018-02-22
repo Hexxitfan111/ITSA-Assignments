@@ -31,6 +31,11 @@ function table_load() {
 	}
 	for (i=0; i<abstraction_mode.scorecard.score_values.length; i++) {
 		document.getElementById(abstraction_mode.scorecard.score_value_ids[i]).innerHTML = abstraction_mode.scorecard.score_values[i];
+		if ((abstraction_mode.scorecard.score_values[i] == "") && (i !=6) && (i != 14) && (i != 15)) {
+			document.getElementById(abstraction_mode.scorecard.score_value_ids[i]).className = "pickable";
+		}  else {
+			document.getElementById(abstraction_mode.scorecard.score_value_ids[i]).className = "grid_item";
+		}
 	}
 }
 
