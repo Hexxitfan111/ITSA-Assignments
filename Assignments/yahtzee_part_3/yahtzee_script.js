@@ -127,31 +127,51 @@ function table_load() {
 		}
 	}
 }
-/*function arr_filt(input, target) {
-	alert();
+function arr_filt(input, target) {
 	return input.filter(function(a){return (a == target)})
 }
 function arr_filt_am(input, num_matches) {
+	
 	switch (num_matches) {
 		case 3:
-			
-			break;
+			a = input.filter(function(x){return (x==input[0])});
+			if (a.length == 3) {
+				return true;
+			}
+			b = input.filter(function(x){return (x==input[1])});
+			if (b.length == 3) {
+				return true;
+			}
+			c = input.filter(function(x){return (x==input[2])});
+			if (c.length == 3) {
+				return true;
+			}
+			return false;
 		case 4:
-			
-			break;
+			e = input.filter(function(x){return (x==input[0])});
+			if (e.length == 4) {
+				return true;
+			}
+			f = input.filter(function(x){return (x==input[1])});
+			if (f.length == 4) {
+				return true;
+			}
+			return false;
 		case 5:
-			
-			break;
+			if (input.every(function(x){return (x=input[0])})); {
+				return true;
+			}
+			return false;
 	}
 }
-*/
+
 function score() {
 	a = document.getElementsByClassName("pickable");
 	
 	this.removeEventListener("click",score,true);
 	this.className = "grid_item";
-	this.innerHTML = Math.floor(Math.random() * 15) + 1;
-	/*
+
+	
 	id_dat = this.id;
 	
 	sc = [];
@@ -163,56 +183,78 @@ function score() {
 	switch(id_dat) {
 		case "1sc":
 			sum = 0;
-			sc = arr_filt(sc, 1);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 1);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "2sc":
 			sum = 0;
-			sc = arr_filt(sc, 2);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 2);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "3sc":
 			sum = 0;
-			sc = arr_filt(sc, 3);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 3);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "4sc":
 			sum = 0;
-			sc = arr_filt(sc, 4);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 4);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "5sc":
 			sum = 0;
-			sc = arr_filt(sc, 5);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 5);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "6sc":
 			sum = 0;
-			sc = arr_filt(sc, 6);
-			for (i=0; i<sc.length; i++) {
-				sum += sc[i];
+			op = arr_filt(sc, 6);
+			for (i=0; i<op.length; i++) {
+				sum += op[i];
 			};
 			this.innerHTML = sum;
 			break;
 		case "7sc":
+			sum = 0;
+			op = arr_filt_am(sc, 3);
+			if (op) {
+				for (i=0; i<5; i++) {
+					sum += sc[i];
+				} 
+			} else {
+				sum = 0;
+			}
+			this.innerHTML = sum;
+			break;
+		case "8sc":
+			sum = 0;
+			op = arr_filt_am(sc, 4);
+			if (op) {
+				for (i=0; i<5; i++) {
+					sum += sc[i];
+				} 
+			} else {
+				sum = 0;
+			}
+			this.innerHTML = sum;
+			break;
 			
-			
-	}*/
+	}
 	update();
 	newturn();
 }
