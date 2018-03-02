@@ -40,6 +40,9 @@
 .die_sprite {
 	width:100px; height:100px; padding:0.5%; margin:2.5%; width:8%; height:8%;
 }
+#click_instruct {
+	padding-bottom:10%;
+}
 body {
 	font-family: 'Kavivanar', cursive;
 }
