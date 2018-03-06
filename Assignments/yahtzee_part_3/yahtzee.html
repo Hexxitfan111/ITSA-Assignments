@@ -13,34 +13,36 @@
 
   <body onload="init()">
 	<label id="player_name"></label><br>
-	<img id="player_avatar"><br>
+	<img id="player_avatar" onclick="player_edit()"><label id="name_instr_label">Click me to change player info!</label><br>
+	
     <div id="field_and_score">
-	<div id="play_side">
-
-	<button id="new_game_butt" onclick="new_game()"></button>
-	<br>
-	<img id="dice_cup" src="" onclick="roll_dice()">
-	<label id="click_instruct"></label>
-	<div id="dice_area"></div>
-	</div>
+	
+	  <div id="play_side">
+	    <button id="new_game_butt" onclick="new_game()"></button>
+	    <br>
+	    <img id="dice_cup" src="" onclick="roll_dice()">
+	    <label id="click_instruct"></label>
+	    <div id="dice_area"></div>
+	  </div>
+	  
 	  <div id="score_side">
 	    <div id="grid_container">
 	      <div class="grid_item" id="ones"></div>
 		  <div class="grid_item" id="1sc"></div>
 		  
-	      <div class="grid_item" id="twos"></div>
+		  <div class="grid_item" id="twos"></div>
 		  <div class="grid_item" id="2sc"></div>
-		  
-	      <div class="grid_item" id="threes"></div>
+		   
+		  <div class="grid_item" id="threes"></div>
 		  <div class="grid_item" id="3sc"></div>
 		  
-	      <div class="grid_item" id="fours"></div>
+		  <div class="grid_item" id="fours"></div>
 		  <div class="grid_item" id="4sc"></div>
 		  
-	      <div class="grid_item" id="fives"></div>
+		  <div class="grid_item" id="fives"></div>
 		  <div class="grid_item" id="5sc"></div>
 		  
-	      <div class="grid_item" id="sixes"></div>
+		  <div class="grid_item" id="sixes"></div>
 		  <div class="grid_item" id="6sc"></div>
 
 		  <div class="grid_item" id="subtotal1"></div>
@@ -49,25 +51,25 @@
 		  <div class="divider"></div>
 		  <div class="divider"></div>
 		  
-	      <div class="grid_item" id="3ofkind"></div>
+		  <div class="grid_item" id="3ofkind"></div>
 		  <div class="grid_item" id="7sc"></div>
 		  
-	      <div class="grid_item" id="4ofkind"></div>
+		  <div class="grid_item" id="4ofkind"></div>
 		  <div class="grid_item" id="8sc"></div>
 		  
-	      <div class="grid_item" id="fullhouse"></div>
+		  <div class="grid_item" id="fullhouse"></div>
 		  <div class="grid_item" id="9sc"></div>
 		  
 		  <div class="grid_item" id="smstraight"></div>
 		  <div class="grid_item" id="10sc"></div>
 		  
-	      <div class="grid_item" id="lgstraight"></div>
+		  <div class="grid_item" id="lgstraight"></div>
 		  <div class="grid_item" id="11sc"></div>
 		  
-	      <div class="grid_item" id="yahtzee"></div>
+		  <div class="grid_item" id="yahtzee"></div>
 		  <div class="grid_item" id="12sc"></div>
 		  
-	      <div class="grid_item" id="chance"></div>
+		  <div class="grid_item" id="chance"></div>
 		  <div class="grid_item" id="13sc"></div>
 		  
 		  <div class="grid_item" id="subtotal2"></div>
@@ -75,13 +77,26 @@
 		  
 		  <div class="grid_item" id="total_score"></div>
 		  <div class="grid_item" id="sc_total"></div>
-	    </div>
+		</div>
 	  </div>
     </div>
-	<div id="information">
-	<label id="turns_left"></label> <br>
-	<label id="throws_left"></label>
+	
+	<div id="player_change_side" class="hidden">
+	  <input id="name_change"><br>
+	  <select id="av_change">
+	    <option>1</option>
+	    <option>2</option>
+	    <option>3</option>
+	    <option>4</option>
+	  </select><br>
+	  <button id="submit_pc" onclick="player_change()">Submit</button>
 	</div>
+	
+	<div id="information">
+	  <label id="turns_left"></label> <br>
+	  <label id="throws_left"></label>
+	</div>
+	
   </body>
 
 </html>

@@ -49,3 +49,7 @@ body {
 button{
 	font-family: 'Kavivanar', cursive;
 }
+
+.hidden {
+	display: none;
+}

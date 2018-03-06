@@ -12,17 +12,71 @@ function new_game() {
 }
 
 function init() {
+	
 	table_load();
+	
 	document.getElementById("dice_cup").src = "https://i.imgur.com/OOhb34l.png";
 	document.getElementById("new_game_butt").innerHTML = "New Game";
-	document.getElementById("player_name").innerHTML = ("Player Name: " + yahtzee.player.name);
-	document.getElementById("player_avatar").src = yahtzee.player.avatar;
-	//Dice
+	document.getElementById("player_name").innerHTML = ("Player: PLAYER 1");
+	av_img = document.getElementById("player_avatar");
+	av_img.src = yahtzee.player.avatar[0];
+	
 	for (i=0; i<5; i++) {
 		dice_set[i].render();
 	}
 	update();
 }
+var win = "";
+function player_edit() {
+	document.getElementById("turns_left").className = "hidden";
+	document.getElementById("throws_left").className = "hidden";
+	document.getElementById("name_instr_label").className = "hidden";
+	document.getElementById("play_side").className = "hidden";
+	document.getElementById("score_side").className = "hidden";
+	document.getElementById("player_change_side").className = "";
+	win = window.open("", "Title", "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=100,height=600,top="+(0)+",left="+(800));
+	win.document.body.innerHTML = "<div id='imgs'>\
+	<img src='"+ yahtzee.player.avatar[0] + "'width='100' height='100'><br> Avatar 1 <br><br><br>\
+	<img src='"+ yahtzee.player.avatar[1] + "'width='100' height='100'><br> Avatar 2 <br><br><br>\
+	<img src='"+ yahtzee.player.avatar[2] + "'width='100' height='100'><br> Avatar 3 <br><br><br>\
+	<img src='"+ yahtzee.player.avatar[3] + "'width='100' height='100'><br> Avatar 4\
+	</div>";
+}
+function player_change() {
+	document.getElementById("player_name").innerHTML = "Player: " + document.getElementById("name_change").value;
+	yahtzee.player.name = document.getElementById("name_change").value;
+	if (yahtzee.player.name == "") {
+		yahtzee.player.name = "PLAYER 1";
+		document.getElementById("player_name").innerHTML = "Player: PLAYER 1";
+	}
+	switch (document.getElementById("av_change").value) {
+		case "1":
+			document.getElementById("player_avatar").src = yahtzee.player.avatar[0];
+			break;
+		case "2":
+			document.getElementById("player_avatar").src = yahtzee.player.avatar[1];
+			break;
+		case "3":
+			document.getElementById("player_avatar").src = yahtzee.player.avatar[2];
+			break;
+		case "4":
+			document.getElementById("player_avatar").src = yahtzee.player.avatar[3];
+			break;
+		default :
+			document.getElementById("player_avatar").src = yahtzee.player.avatar[0];
+			break;
+	}
+	win.close();
+	document.getElementById("turns_left").className = "";
+	document.getElementById("throws_left").className = "";
+	document.getElementById("play_side").className = "";
+	document.getElementById("score_side").className = "";
+	document.getElementById("player_change_side").className = "hidden";
+}
+function avatar_select() {
+	
+}
+
 function die(id_num, inc) {
 	this.held = false;
 	this.init = false;
@@ -354,8 +408,10 @@ function score() {
 	for (i=7; i<14; i++) {
 		if (yahtzee.scorecard.score_values[i] != "") {
 			val_sum2 += parseInt(yahtzee.scorecard.score_values[i]);
+			
 		}
 	}
+	if (val_sum1 >= 63) {val_sum1 += 35}
 	val_tot = val_sum1 + val_sum2;
 	document.getElementById("sc_sub1").innerHTML = val_sum1;
 	document.getElementById("sc_sub2").innerHTML = val_sum2;
