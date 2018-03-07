@@ -53,3 +53,6 @@ button{
 .hidden {
 	display: none;
 }
+.pl_ch_lbl {
+	margin-right: 5%;
+}
