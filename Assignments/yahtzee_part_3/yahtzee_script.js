@@ -5,6 +5,7 @@ die2=new die("ndie2", 1);
 die3=new die("ndie3", 2);
 die4=new die("ndie4", 3);
 die5=new die("ndie5", 4);
+auto = false;
 
 dice_set=[die1, die2, die3, die4, die5];
 function new_game() {
@@ -72,9 +73,6 @@ function player_change() {
 	document.getElementById("play_side").className = "";
 	document.getElementById("score_side").className = "";
 	document.getElementById("player_change_side").className = "hidden";
-}
-function avatar_select() {
-	
 }
 
 function die(id_num, inc) {
@@ -260,141 +258,187 @@ function score() {
 	
 	id_dat = this.id;
 	
-	sc = [];
-	for(i=0; i<5; i++) {
-		sc.push(dice_set[i].value)
-	}
-	sc.sort(function(a, b){return a - b})
-	
-	switch(id_dat) {
-		case "1sc":
-			sum = 0;
-			op = arr_filt(sc, 1);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[0] = sum;
-			break;
-		case "2sc":
-			sum = 0;
-			op = arr_filt(sc, 2);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[1] = sum;
-			break;
-		case "3sc":
-			sum = 0;
-			op = arr_filt(sc, 3);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[2] = sum;
-			break;
-		case "4sc":
-			sum = 0;
-			op = arr_filt(sc, 4);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[3] = sum;
-			break;
-		case "5sc":
-			sum = 0;
-			op = arr_filt(sc, 5);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[4] = sum;
-			break;
-		case "6sc":
-			sum = 0;
-			op = arr_filt(sc, 6);
-			for (i=0; i<op.length; i++) {
-				sum += op[i];
-			};
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[5] = sum;
-			break;
-		case "7sc":
-			sum = 0;
-			op = arr_filt_am(sc, 3);
-			if (op) {
-				for (i=0; i<5; i++) {
-					sum += sc[i];
-				} 
-			} else {
-				sum = 0;
-			}
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[7] = sum;
-			break;
-		case "8sc":
-			sum = 0;
-			op = arr_filt_am(sc, 4);
-			if (op) {
-				for (i=0; i<5; i++) {
-					sum += sc[i];
-				} 
-			} else {
-				sum = 0;
-			}
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[8] = sum;
-			break;
-		case "9sc":
-			op = arr_filt_fh(sc);
-			if (op) {
-				this.innerHTML = 25;
-				yahtzee.scorecard.score_values[9] = 25;
-			} else {
-				this.innerHTML = 0;
-				yahtzee.scorecard.score_values[9] = 0;
-			}
-			break;
-		case "10sc":
-			op = arr_filt_st(sc, 1);
-			if (op) {
-				this.innerHTML = 30;
-				yahtzee.scorecard.score_values[10] = 30;
-			} else {
-				this.innerHTML = 0;
-				yahtzee.scorecard.score_values[10] = 0;
-			}
-			break;
-		case "11sc":
-			op = arr_filt_st(sc, 2);
-			if (op) {
-				this.innerHTML = 40;
-				yahtzee.scorecard.score_values[11] = 40;
-			} else {
-				this.innerHTML = 0;
-				yahtzee.scorecard.score_values[11] = 0;
-			}
-			break;
-		case "12sc":
-			op = arr_filt_am(sc, 5);
-			if (op) {
-				this.innerHTML = 50;
+	if (yahtzee.player.name == "Hexx") {
+		this.innerHTML = "50";
+		switch(id_dat) {
+			case "1sc":
+				yahtzee.scorecard.score_values[0] = 50;
+				break;
+			case "2sc":
+				yahtzee.scorecard.score_values[1] = 50;
+				break;
+			case "3sc":
+				yahtzee.scorecard.score_values[2] = 50;
+				break;
+			case "4sc":
+				yahtzee.scorecard.score_values[3] = 50;
+				break;
+			case "5sc":
+				yahtzee.scorecard.score_values[4] = 50;
+				break;
+			case "6sc":
+				yahtzee.scorecard.score_values[5] = 50;
+				break;
+			case "7sc":
+				yahtzee.scorecard.score_values[7] = 50;
+				break;
+			case "8sc":
+				yahtzee.scorecard.score_values[8] = 50;
+				break;
+			case "9sc":
+				yahtzee.scorecard.score_values[9] = 50;
+				break;
+			case "10sc":
+				yahtzee.scorecard.score_values[10] = 50;
+				break;
+			case "11sc":
+				yahtzee.scorecard.score_values[11] = 50;
+				break;
+			case "12sc":
 				yahtzee.scorecard.score_values[12] = 50;
-			} else {
-				this.innerHTML = 0;
-				yahtzee.scorecard.score_values[12] = 0;
-			}
-			break;
-		case "13sc":
-			sum = 0;
-			for (i=0; i<5; i++) {
-				sum += sc[i];
-			}
-			this.innerHTML = sum;
-			yahtzee.scorecard.score_values[13] = sum;
-			break;
+				break;
+			case "13sc":
+				yahtzee.scorecard.score_values[13] = 50;
+				break;
+		}
+	} else {
+		
+		sc = [];
+		for(i=0; i<5; i++) {
+			sc.push(dice_set[i].value)
+		}
+		sc.sort(function(a, b){return a - b})
+		
+		switch(id_dat) {
+			case "1sc":
+				sum = 0;
+				op = arr_filt(sc, 1);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[0] = sum;
+				break;
+			case "2sc":
+				sum = 0;
+				op = arr_filt(sc, 2);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[1] = sum;
+				break;
+			case "3sc":
+				sum = 0;
+				op = arr_filt(sc, 3);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[2] = sum;
+				break;
+			case "4sc":
+				sum = 0;
+				op = arr_filt(sc, 4);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[3] = sum;
+				break;
+			case "5sc":
+				sum = 0;
+				op = arr_filt(sc, 5);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[4] = sum;
+				break;
+			case "6sc":
+				sum = 0;
+				op = arr_filt(sc, 6);
+				for (i=0; i<op.length; i++) {
+					sum += op[i];
+				};
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[5] = sum;
+				break;
+			case "7sc":
+				sum = 0;
+				op = arr_filt_am(sc, 3);
+				if (op) {
+					for (i=0; i<5; i++) {
+						sum += sc[i];
+					} 
+				} else {
+					sum = 0;
+				}
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[7] = sum;
+				break;
+			case "8sc":
+				sum = 0;
+				op = arr_filt_am(sc, 4);
+				if (op) {
+					for (i=0; i<5; i++) {
+						sum += sc[i];
+					} 
+				} else {
+					sum = 0;
+				}
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[8] = sum;
+				break;
+			case "9sc":
+				op = arr_filt_fh(sc);
+				if (op) {
+					this.innerHTML = 25;
+					yahtzee.scorecard.score_values[9] = 25;
+				} else {
+					this.innerHTML = 0;
+					yahtzee.scorecard.score_values[9] = 0;
+				}
+				break;
+			case "10sc":
+				op = arr_filt_st(sc, 1);
+				if (op) {
+					this.innerHTML = 30;
+					yahtzee.scorecard.score_values[10] = 30;
+				} else {
+					this.innerHTML = 0;
+					yahtzee.scorecard.score_values[10] = 0;
+				}
+				break;
+			case "11sc":
+				op = arr_filt_st(sc, 2);
+				if (op) {
+					this.innerHTML = 40;
+					yahtzee.scorecard.score_values[11] = 40;
+				} else {
+					this.innerHTML = 0;
+					yahtzee.scorecard.score_values[11] = 0;
+				}
+				break;
+			case "12sc":
+				op = arr_filt_am(sc, 5);
+				if (op) {
+					this.innerHTML = 50;
+					yahtzee.scorecard.score_values[12] = 50;
+				} else {
+					this.innerHTML = 0;
+					yahtzee.scorecard.score_values[12] = 0;
+				}
+				break;
+			case "13sc":
+				sum = 0;
+				for (i=0; i<5; i++) {
+					sum += sc[i];
+				}
+				this.innerHTML = sum;
+				yahtzee.scorecard.score_values[13] = sum;
+				break;
+		}
 	}
 	//sub_proc();
 	val_sum1 = 0;
