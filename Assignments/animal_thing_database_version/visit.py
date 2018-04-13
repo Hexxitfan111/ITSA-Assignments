@@ -1,5 +1,4 @@
-import classes_and_data, os, maps
-
+import classes_and_data, os, repos
 def cls():
 #clears the console. Supports Windows and Linux, unsure about Mac.
 	cls_success = True
@@ -32,8 +31,8 @@ confirm()
 cls()
 while mainloop:
 	cls()
-	Zoo = classes_and_data.Zoo
-	Zoo.locations[location].determine_nav()
+	Zoo = repos.Zoo
+	Zoo.locations[location].determine_nav(Zoo)
 	Zoo.map_update(location)
 	ani = Zoo.locations[location].animal
 	locs = Zoo.locations
@@ -59,7 +58,7 @@ while mainloop:
 			print("Thank you for visiting the Z.C.O.C.E.! Have an exotic day!")
 			print("You turn and leave the zoo.")
 			input("(Press [Enter] to exit...)")
-			Zoo.close()
+			mainloop = False
 		elif (action in (' '.join(str(x) for x in Zoo.iter_col))):
 			location = Zoo.locations[location].neighbors[int(action)]
 		else:
@@ -90,8 +89,7 @@ while mainloop:
 		elif inter == "2":
 			print("\nYou examine the fun facts about the animal:")
 			temp = ani.interact("INFO")
-			temp2 = (temp[0] + ". " + temp[1])
-			print(temp2)
+			print(temp)
 			confirm()
 		elif inter.upper() == "EXIT":
 			print("You turn and leave the exhibit")
