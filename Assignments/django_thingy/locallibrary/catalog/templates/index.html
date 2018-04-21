@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Kommunistisches Bibliothekssystem</h1>
+
+  <p>Hallo, Genosse!</p>
+  <p>Willkommen beim <em>Local Book Thingy</em>, einer schrecklichen Bibliothekssimulation, die nur 50 Kopien des Kommunistischen Manifests enthält.</p>
+  <p>
+Dies ist wahrscheinlich das 4-millionste Mal, dass jemand dieses Django-Tutorial sowieso gemacht hat, also wenn Sie eine tatsächliche Bibliothekswebsite wollen, empfehle ich es <a href="http://mysapl.org/" target="_blank">Hier</a> zu versuchen.</p>
+
+<h2>Statistiken:</h2>
+
+  <p>Die Bibliothek hat folgende Datensatzanzahl:</p>
+  <ul>
+    <li><strong>Gesamtzahl der Bücher:</strong> {{ num_books }}</li>
+    <li><strong>Kopien des Manifests:</strong> {{ num_instances }}</li>
+    <li><strong>Für das Teilen verfügbare Kopien:</strong> {{ num_instances_available }}</li>
+    <li><strong>Autoren des Manifests:</strong> Karl Marx, Friedrich Engels	</li>
+  </ul>
+<p>Sie haben diese Seite {{ num_visits }} mal besucht.</p>
+{% endblock %}
