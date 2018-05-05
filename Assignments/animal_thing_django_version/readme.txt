@@ -7,3 +7,8 @@ Welcome the third distortion of the original animal_thing zoo project. This para
 "The more work I take, the more often I break. What am I?" 
 A Programming Project
 
+5/5/2018
+Finally, complete!
+Django is fun to use, but it sure is confusing when it starts spitting out random errors that string through 50 files and make it near impossible to actually tell where or what the error is.
+Anyways, screenshots of my admin pages are in the screenshots folder.
+Project is obviously in the zoo folder.
