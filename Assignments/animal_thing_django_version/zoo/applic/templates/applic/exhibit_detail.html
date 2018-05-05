@@ -1,0 +1,25 @@
+{% extends "base_zcoce.html" %}
+
+{% block zcontent %}
+
+
+<h1 class="title">{{ exhibit.name }}</h1>
+<br>
+<h3>{{ exhibit.description }}</h3>
+<br>
+<h4>There are {{exhibit.animals.count}} animals to look at:</h4>
+
+{% for a in exhibit.animals.all %}
+  <label><a href="{{ a.get_absolute_url }}">{{ a.name }}</a></label><br>
+{% endfor %}
+
+<h3>Nearby Exhibits:</h3>
+{% for n in exhibit.neighbors.all %}
+  <label> <a href="{{ n.get_absolute_url }}">{{ n }}</a> </label><br>
+{% endfor %}
+
+{% if exhibit.is_exit == "T" %}
+  <br><a href="{%url 'zoolist'%}">Exit</a>
+{% endif %}
+
+{% endblock %}

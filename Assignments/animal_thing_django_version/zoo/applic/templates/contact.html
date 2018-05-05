@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact Us</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/base.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body>
+	<h1 class="terminal title">&gt;Contact Us:</h1>
+	<h1 class="terminal"></h1>
+	<div id="contact-area">
+			
+			<form>
+				<label class="terminal">Name:</label>
+				<input class="terminal input" type="text"><br>
+				
+				<label class="terminal">City:</label>
+				<input class="terminal input" type="text"><br>
+	
+				<label class="terminal">Email:</label>
+				<input class="terminal input" type="text"><br>
+				
+				<label class="terminal">Message:</label><br />
+				<textarea id="msg" class="terminal input" rows="10" cols="20"></textarea><br>
+
+				<input id="submit" class="terminal input" type="submit">
+			</form>
+			<br>
+			<br>
+			<a class="terminal link" href="javascript:history.go(-1)">Back</a>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+{% extends "base_zcoce.html" %}
+
+{% block zcontent %}
+
+<h1 class="title">{{animal.name}}</h1>
+<img src="{{animal.image_url}}" id="animpic"><br>
+<label id="transition" class="anim_in anim_out"></label><br>
+<label id="action" class="anim_in anim_out"></label>
+<h3 id="subtitle">Actions:</h3>
+
+<ul>
+
+<script>
+action = document.getElementById("action");
+trans = document.getElementById("transition");
+
+function display_name() {
+	action.className = "";
+	trans.className = "";
+	switch("{{animal.diet}}"){
+		case "C":
+			food="Carnivore";
+			break;
+		case "H":
+			food="Herbivore";
+			break;
+		case "O":
+			food="Omnivore";
+			break;
+	}
+	trans.innerHTML = ("You look at the exhibit title...<br>The sign reads:")
+	action.innerHTML = ("Common Name: {{animal.name}}<br>Scientific Name: {{ animal.sci_name }}<br>Nickname: {{animal.nickname}}<br>Diet: " + food + "");
+	anim_init();
+	setTimeout(anim_fin, 7000);
+}
+function display_info() {
+	action.className = "";
+	trans.className = "";
+	trans.innerHTML = ("You look at the exhibit information...<br>The sign reads:");
+	action.innerHTML = ("{{ animal.info }}");
+	anim_init();
+	setTimeout(anim_fin, 7000);
+}
+function interact() {
+	action.className = "";
+	trans.className = "";
+	trans.innerHTML = ("You tap on the glass...");
+	action.innerHTML = ("{{animal.inter}}");
+	anim_init();
+	setTimeout(anim_fin, 7000);
+}
+function anim_init(){
+	action.className = "anim_in";
+	trans.className = "anim_in";
+}
+function anim_fin(){
+	action.className = "anim_out";
+	trans.className = "anim_out";
+}
+</script>
+
+<li class="option">
+<button onclick="display_name()">Read the exhibit title</button>
+</li>
+<li class="option">
+<button onclick="display_info()">Read the animal information</button>
+</li>
+<li class="option">
+<button onclick="interact()">Tap on the glass</button>
+</li>
+<li>
+<br><br><br>
+<a href="javascript:history.go(-1)">Look at another exhibit...</a>
+</li>
+
+</ul>
+{% endblock %}

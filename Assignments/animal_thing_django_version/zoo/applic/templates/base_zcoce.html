@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  {% block title %}<title>ZooVirtualTour 1.4.10-Z.C.O.C.E</title>{% endblock %}
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/zcoce.css' %}">
+</head>
+
+<body>
+
+<div id="main">
+	<p>{% block zcontent %}{% endblock %}</p>
+</div>
+
+</body>
+
+</html>

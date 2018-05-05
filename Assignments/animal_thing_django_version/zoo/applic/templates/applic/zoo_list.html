@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1 class="title terminal">&gt;ZVT - Zoo Selection Screen</h1>
+<p class="terminal">&gt;Please select a simulation to visit:</p>
+
+{% if zoo_list %}
+  <ul>
+
+  {% for zoo in zoo_list %}
+    <li>
+      <a class="terminal link" href="{{ zoo.get_absolute_url }}">
+      {{ zoo.name }}
+      </a>
+    </li>
+  {% endfor %}
+{% endif %}
+  
+{% endblock %}

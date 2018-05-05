@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<h1 class="title terminal">{{ zoo.name }}</h1>
+<br>
+<h3 class="terminal">&gt;Description:</h3>
+<p class="terminal">&gt;The Zoological Collection of Organisms Common and Esoteric.<br>
+&gt;The Z.C.O.C.E. is renowned for two things: Its... unique collections of organisms,<br>
+and distinct lack of regard for international animal transport and trade laws. <br>
+Both of these are probably linked to its multiple ties to the Russian government.<br>
+Remarkably, there has never been any recorded PETA activity against the <br>
+Z.C.O.C.E. However, many people suspect foul play as over 400 activists have <br>
+disappeared while on zoo grounds. The Z.C.O.C.E. denies any knowledge, of course. <br>
+</p>
+
+<h3 class="terminal">Exhibits:</h3>
+
+{% for e in zoo.exhibits.all %}
+	<label class="terminal">{{ e }}</label>
+{% endfor %}
+<br>
+
+
+<br><br><br>
+<a href="{{ zoo.entrance1.get_absolute_url }}" class="terminal link">Enter this zoo</a><br>
+<a href="javascript:history.go(-1)" class="terminal link">Back</a>
+
+
+{% endblock %}

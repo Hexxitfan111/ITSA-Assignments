@@ -1,0 +1,28 @@
+ul {
+	list-style-type:none;
+}
+
+.title {
+padding-top:5%;
+}
+.terminal {
+	font-size:150%;padding-left:5%;color:white;margin-bottom:1%;padding-bottom:1%;
+}
+.link {
+	text-decoration:underline;
+}
+
+body {
+	font-family: 'Inconsolata', monospace;color:white;
+	background-image: url("https://i.imgur.com/JmeexgV.png");
+	background-size:100%;
+}
+.input {
+	background-color:black; padding-left:0%
+}
+#msg {
+	margin-left:12%
+}
+#submit {
+	margin-left:12%
+}

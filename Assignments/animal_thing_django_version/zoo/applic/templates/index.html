@@ -2,6 +2,15 @@
 
 {% block content %}
 
-<p class="fff">{{ temp }}</p>
+<p class="title terminal">&gt;Welcome to ZooVirtualTour v1.4.10!</p>
+<p class="terminal">&gt;Latest Update Notes:<br>
+&gt;As of ZVT v1.4.10, personal data is no longer collected for marketing purposes.<br>
+&gt;Removed multiple accidentally included malware installations.<br>
+&gt;We at ZVT are committed to continously improving our user experience!<br>
+&gt;Send us feedback at automaticdeletion@hotmail.com, or using the Contact <br>
+&gt;Us Page!
+</p>
+<p class="terminal">&gt;Please select an option:</p>
+<a href="{% url 'zoolist' %}" class="terminal link">Pick a zoo.</a>
 
 {% endblock %}
